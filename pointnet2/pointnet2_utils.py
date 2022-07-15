@@ -215,6 +215,7 @@ class BallQuery(Function):
 
         B, N, _ = xyz.size()
         npoint = new_xyz.size(1)
+        
         idx = torch.cuda.IntTensor(B, npoint, nsample).zero_()
 
         pointnet2.ball_query_wrapper(B, N, npoint, radius, nsample, new_xyz, xyz, idx)
