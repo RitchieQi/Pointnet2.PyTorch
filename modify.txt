@@ -1,0 +1,2 @@
+AT_CHECK and THCState_getCurrentStream(state)
+changed them to TORCH_CHECK and at::cuda::getCurrentCUDAStream().stream()
